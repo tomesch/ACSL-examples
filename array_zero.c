@@ -9,7 +9,7 @@
   assumes \exists integer k; 0 <= k < n && t[k] != 0;
   ensures \result == -1;
   */
-int all_zeros(int t[], int n) {
+int array_zero(int t[], int n) {
   int i;
   /*@ loop invariant 0 <= i <= n;
     loop invariant \forall integer j; 0<= j < i ==> t[j] == 0;
