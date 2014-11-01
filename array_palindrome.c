@@ -2,16 +2,14 @@
   requires \valid(t+(0..n-1));
 
   behavior success:
-  assumes
-  \forall integer j; 0 <= j < n ==> t[j] == t[n - j - 1];
+  assumes \forall integer j; 0 <= j < n ==> t[j] == t[n - j - 1];
   ensures \result == 0;
 
   behavior failure:
-  assumes
-  \exists integer j; 0 <= j < n && t[j] != t[n - j - 1];
+  assumes \exists integer j; 0 <= j < n && t[j] != t[n - j - 1];
   ensures \result == -1;
   */
-int palindrome (int t[], int n) {
+int array_palindrome (int t[], int n) {
   int i;
   /*@ loop invariant 0 <= i <= n;
     loop invariant \forall integer j; 0 <= j < i ==> t[j] == t[n - j - 1];

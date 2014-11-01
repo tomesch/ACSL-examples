@@ -9,7 +9,7 @@
   assumes \forall integer j; 0 <= j < n ==> t[j] != val;
   ensures \result == -1;
   */
-int search (int val, int t[], int n) {
+int array_search (int val, int t[], int n) {
   int i;
   /*@ loop invariant 0 <= i <= n;
     loop invariant \forall integer j; 0 <= j < i ==> t[j] != val;

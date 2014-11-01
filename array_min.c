@@ -4,7 +4,7 @@
   ensures \forall integer j; 0 <= j < n ==> t[\result] <= t[j];
   ensures 0 <= \result < n; 
   */
-int min (int t[], int n) {
+int array_min (int t[], int n) {
   int i, min = 0;
   /*@ loop invariant 0 <= i <= n;
     loop invariant 0 <= min < n;

@@ -5,7 +5,7 @@
   ensures \forall integer j; 0 <= j < n ==> s[j] == t[j];
   assigns t[0..n-1];
   */
-void copie(int s[], int t[], int n) {
+void array_copy (int s[], int t[], int n) {
   int i;
   /*@ loop invariant 0 <= i <= n;
     loop invariant \forall integer j; 0 <= j < i ==> t[j] == s[j];
